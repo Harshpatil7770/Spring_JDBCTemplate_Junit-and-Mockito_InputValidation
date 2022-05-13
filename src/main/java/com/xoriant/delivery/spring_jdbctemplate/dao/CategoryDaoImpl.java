@@ -1,6 +1,7 @@
 package com.xoriant.delivery.spring_jdbctemplate.dao;
 
 import java.util.List;
+import java.util.Scanner;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,9 +37,23 @@ public class CategoryDaoImpl implements CategoryDao {
 	}
 
 	@Override
-	public String addNewListOfCategories(List<Category> catLists) {
+	public String addNewListOfCategories(Category catLists) {
 
-		return null;
+		int result = jdbcTemplate.update(DBquries.ADD_NEW_CATEGORY, catLists.getCategoryId(),
+				catLists.getCategoryName());
+		while (true) {
+			if (result != 0) {
+				System.out.println("New Category Added Succesfully ::" + catLists.getCategoryName());
+				System.out.println("Do You want to add more ? 1) Yes 2) no");
+				Scanner sc = new Scanner(System.in);
+				int response = sc.nextInt();
+				if (response != 1) {
+					break;
+				}
+
+			}
+		}
+		return "====== New Lists of Categories added Succesfully ====";
 	}
 
 	@Override

@@ -1,0 +1,15 @@
+<factorypath>
+    <factorypathentry kind="VARJAR" id="M2_REPO/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/springframework/spring-core/5.3.19/spring-core-5.3.19.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/springframework/spring-jcl/5.3.19/spring-jcl-5.3.19.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/springframework/spring-context/5.3.19/spring-context-5.3.19.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/springframework/spring-aop/5.3.19/spring-aop-5.3.19.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/springframework/spring-beans/5.3.19/spring-beans-5.3.19.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/springframework/spring-expression/5.3.19/spring-expression-5.3.19.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/mysql/mysql-connector-java/8.0.28/mysql-connector-java-8.0.28.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/com/google/protobuf/protobuf-java/3.11.4/protobuf-java-3.11.4.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/springframework/spring-jdbc/5.3.19/spring-jdbc-5.3.19.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/springframework/spring-tx/5.3.19/spring-tx-5.3.19.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/projectlombok/lombok/1.18.24/lombok-1.18.24.jar" enabled="true" runInBatchMode="false"/>
+</factorypath>

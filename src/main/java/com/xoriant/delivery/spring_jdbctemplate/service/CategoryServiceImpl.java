@@ -1,6 +1,7 @@
 package com.xoriant.delivery.spring_jdbctemplate.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,7 +23,8 @@ public class CategoryServiceImpl implements CategoryService {
 	}
 
 	@Override
-	public String addNewListOfCategories(List<Category> catLists) {
+	public String addNewListOfCategories(Category catLists) {
+
 		categoryDao.addNewListOfCategories(catLists);
 		String msg = "====== New Lists of Categories added Succesfully ====";
 		return msg;
@@ -31,7 +33,8 @@ public class CategoryServiceImpl implements CategoryService {
 	@Override
 	public Category findById(int categoryId) {
 
-		return categoryDao.findById(categoryId);
+		Category category = categoryDao.findById(categoryId);
+		return category;
 	}
 
 	@Override
@@ -53,8 +56,21 @@ public class CategoryServiceImpl implements CategoryService {
 
 	@Override
 	public String deleteCategory(int categoryId) {
-		
-		return categoryDao.deleteCategoryId(categoryId);
+
+		Category existingCat = categoryDao.findById(categoryId);
+		if (existingCat.getCategoryId() != 0) {
+			return categoryDao.deleteCategoryId(categoryId);
+			// return "Category Id Present in Database";
+		}
+		return "Category Id is not Present in Database";
+	}
+
+	public CategoryDao getCategoryDao() {
+		return categoryDao;
+	}
+
+	public void setCategoryDao(CategoryDao categoryDao) {
+		this.categoryDao = categoryDao;
 	}
 
 }

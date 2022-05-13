@@ -50,4 +50,10 @@ public class ProductServiceImpl implements ProductService {
 		return productDao.deleteProduct(productId);
 	}
 
+	@Override
+	public Product findById(int productId) {
+		
+		return productDao.findById(productId);
+	}
+
 }

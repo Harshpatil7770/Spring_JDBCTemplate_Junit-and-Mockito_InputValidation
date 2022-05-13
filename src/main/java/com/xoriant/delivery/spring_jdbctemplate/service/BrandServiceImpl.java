@@ -17,36 +17,54 @@ public class BrandServiceImpl implements BrandService {
 	@Override
 	public String addNewBrand(Brand brand) {
 
-		return brandDao.addNewBrand(brand);
+		brandDao.addNewBrand(brand);
+		String msg = "New Brand Added !!!";
+		return msg;
 	}
 
 	@Override
 	public String updateBrand(Brand brand) {
-
-		return brandDao.updatebrand(brand);
+		brandDao.updatebrand(brand);
+		String msg = "Brand Updated Succesfully !";
+		return msg;
 	}
 
 	@Override
 	public List<Brand> fetchBrandByCategoryName(String categoryName) {
-		
-		return brandDao.fetchBrandByCategoryName(categoryName);
+
+		List<Brand> existingBrand = brandDao.fetchBrandByCategoryName(categoryName);
+		if (existingBrand != null) {
+			brandDao.fetchBrandByCategoryName(categoryName);
+			return existingBrand;
+		}
+
+		return null;
 	}
 
 	@Override
 	public List<Brand> fetchBrandByCategoryId(int categoryId) {
-		
-		return brandDao.fetchBrandByCategoryId(categoryId);
+		List<Brand> existingBrand = brandDao.fetchBrandByCategoryId(categoryId);
+		if (existingBrand != null) {
+			brandDao.fetchBrandByCategoryId(categoryId);
+			return existingBrand;
+		}
+		return null;
+
 	}
 
 	@Override
 	public Brand fetchBrandById(int brandId) {
-		
-		return brandDao.fetchBrandById(brandId);
+
+		Brand existingBrand = brandDao.fetchBrandById(brandId);
+		if (existingBrand.getBrandId() != 0) {
+			return brandDao.fetchBrandById(brandId);
+		}
+		return null;
 	}
 
 	@Override
 	public String deleteBrandById(int brandId) {
-		
+
 		return brandDao.deleteBrandById(brandId);
 	}
 

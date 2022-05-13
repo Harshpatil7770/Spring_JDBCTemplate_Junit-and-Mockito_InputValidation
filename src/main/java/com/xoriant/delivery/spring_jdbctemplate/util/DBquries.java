@@ -41,4 +41,6 @@ public class DBquries {
 	public static final String FETCH_PRODUCT_BELOW_THE_PRICE_RANGE = "select * from products p inner join brands b on p.brand_id=b.brand_id inner join categories c on p.category_id=c.category_id where p.price<=?";
 
 	public static final String DELETE_PRODUCT_BY_ID = "delete from products where product_id=?";
+
+	public static final String FIND_PRODUCT_BY_ID = "select * from products p inner join brands b on p.brand_id=b.brand_id inner join categories c on p.category_id=c.category_id where p.product_id=?";
 }

@@ -10,7 +10,7 @@ public interface CategoryService {
 
 	String addNewCategory(Category category);
 
-	String addNewListOfCategories(List<Category> catLists);
+	String addNewListOfCategories(Category catLists);
 
 	Category findById(int categoryId);
 

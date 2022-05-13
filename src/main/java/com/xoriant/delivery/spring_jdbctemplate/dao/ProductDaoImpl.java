@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import com.xoriant.delivery.spring_jdbctemplate.mapper.ProductMapper;
 import com.xoriant.delivery.spring_jdbctemplate.model.Brand;
 import com.xoriant.delivery.spring_jdbctemplate.model.Category;
 import com.xoriant.delivery.spring_jdbctemplate.model.Product;
@@ -22,8 +23,6 @@ public class ProductDaoImpl implements ProductDao {
 
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
-
-	
 
 	@Override
 	public String addNewProduct(Product product) {
@@ -116,6 +115,9 @@ public class ProductDaoImpl implements ProductDao {
 			List<Product> sortList = listsProduct.stream()
 					.sorted((product1, product2) -> product1.getProductName().compareTo(product2.getProductName()))
 					.collect(Collectors.toList());
+			if (sortList.contains(null)) {
+				return null;
+			}
 			return sortList;
 
 		}, categoryName);
@@ -254,6 +256,16 @@ public class ProductDaoImpl implements ProductDao {
 		}
 
 		return "===== Not able to delete Product =====";
+	}
+
+	@Override
+	public Product findById(int productId) {
+		ProductMapper mapper = new ProductMapper();
+		Product result = jdbcTemplate.queryForObject(DBquries.FIND_PRODUCT_BY_ID, mapper, productId);
+		if (result == null) {
+			return null;
+		}
+		return result;
 	}
 
 }

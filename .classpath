@@ -13,9 +13,9 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+	<classpathentry kind="src" path="src/main/resources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11">
 		<attributes>
-			<attribute name="module" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
@@ -32,43 +32,24 @@
 			<attribute name="m2e-apt" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="lib" path="C:/Users/patil_ha/Downloads/jar_files.zip"/>
 	<classpathentry kind="src" output="target/test-classes" path="target/generated-test-sources/test-annotations">
 		<attributes>
-			<attribute name="ignore_optional_problems" value="true"/>
-			<attribute name="test" value="true"/>
 			<attribute name="optional" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="ignore_optional_problems" value="true"/>
 			<attribute name="m2e-apt" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="C:/Users/patil_ha/Downloads/jar_files.zip"/>
-	<classpathentry kind="lib" path="C:/Users/patil_ha/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar" sourcepath="C:/Users/patil_ha/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1-sources.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="javax.xml.bind"/>
-			<attribute name="maven.artifactId" value="jaxb-api"/>
-			<attribute name="maven.version" value="2.3.1"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/patil_ha/.m2/repository/org/mockito/mockito-core/4.0.0/mockito-core-4.0.0.jar" sourcepath="C:/Users/patil_ha/.m2/repository/org/mockito/mockito-core/4.0.0/mockito-core-4.0.0-sources.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
 			<attribute name="test" value="true"/>
-			<attribute name="maven.groupId" value="org.mockito"/>
-			<attribute name="maven.artifactId" value="mockito-core"/>
-			<attribute name="maven.version" value="4.0.0"/>
-			<attribute name="maven.scope" value="test"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/patil_ha/.m2/repository/org/springframework/boot/spring-boot-test/2.6.4/spring-boot-test-2.6.4.jar" sourcepath="C:/Users/patil_ha/.m2/repository/org/springframework/boot/spring-boot-test/2.6.4/spring-boot-test-2.6.4-sources.jar">
+	<classpathentry kind="lib" path="C:/Users/patil_ha/.m2/repository/org/springframework/boot/spring-boot-test/2.5.6/spring-boot-test-2.5.6.jar" sourcepath="C:/Users/patil_ha/.m2/repository/org/springframework/boot/spring-boot-test/2.5.6/spring-boot-test-2.5.6-sources.jar">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 			<attribute name="test" value="true"/>
 			<attribute name="maven.groupId" value="org.springframework.boot"/>
 			<attribute name="maven.artifactId" value="spring-boot-test"/>
-			<attribute name="maven.version" value="2.6.4"/>
+			<attribute name="maven.version" value="2.5.6"/>
 			<attribute name="maven.scope" value="test"/>
 		</attributes>
 	</classpathentry>

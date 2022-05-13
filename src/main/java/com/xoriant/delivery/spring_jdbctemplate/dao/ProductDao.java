@@ -12,6 +12,8 @@ public interface ProductDao {
 
 	String updateProduct(Product product);
 
+	Product findById(int productId);
+
 	// Java 1.8 feature
 	List<Product> fetchAll();
 
